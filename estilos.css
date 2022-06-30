@@ -1,0 +1,142 @@
+*,*::after,*::before{
+  box-sizing: border-box;
+}
+body{
+margin: 0;
+padding: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100%;
+background: linear-gradient(0deg, rgba(144,56,5,1) 0%, rgba(226,97,23,1) 50%, rgba(144,56,5,1) 100%);
+}
+.contenedor{
+  perspective: 700px;
+  width: 200px;
+  height: 200px;
+}
+.caja{
+  transform-style: preserve-3d;
+	animation: girar 15s infinite linear;
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+.cara{
+  top:0px;
+  left: 0px;
+  background-color: #C4895A;
+  position: absolute;
+}
+.cara1{
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  align-items: center;
+  transform: translateZ(125px);
+  width:200px;
+  height: 200px;
+  border-top:1px solid #583D23;
+  border-bottom:1px solid #583D23;
+}
+.cara2{
+  width:250px;
+  height: 200px;
+  transform: translateX(75px) rotateY(90deg);
+}
+.cara3{
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  align-items: center;
+  transform: translateZ(-125px);
+  width:200px;
+  height: 200px;
+  border-top:1px solid #583D23;
+  border-bottom:1px solid #583D23;
+}
+.cara4{
+  width:250px;
+  height: 200px;
+  transform: translateX(-125px) rotateY(90deg);
+}
+.cara5{
+  width:200px;
+  height:250px;
+  transform: translateY(-125px) rotateX(90deg);
+  display: flex;
+  justify-content: center;
+}
+.cara6{
+  width:200px;
+  height:250px;
+  transform: translateY(75px) rotateX(90deg);
+  display: flex;
+  justify-content: center;
+}
+.codigo{
+  width: 60px;
+  height: 40px;
+  background-image: url(./codigo.jpg);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.fragil1{
+  width: 80px;
+  height: 70px;
+  background-image: url(./fragil1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.fragil2{
+  width: 90px;
+  height: 110px;
+  background-image: url(./fragil2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.cinta1{
+  width: 25px;
+  height: 40px;
+  background-color: #F7F4DF;
+  opacity: .4;
+}
+.cinta2{
+  width: 25px;
+  height: 250px;
+  background-color: #F7F4DF;
+  opacity: .4;
+  display: flex;
+  justify-content: center;
+}
+.abertura{
+  width: 1px;
+  height: 250px;
+  background-color: #583D23;
+  opacity: .4;
+}
+@keyframes girar {
+  0% {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+  25%{
+    transform: rotateY(360deg) rotateX(0deg);
+  }
+  50% {
+    transform: rotateY(360deg) rotateX(360deg);
+  }
+  75% {
+    transform: rotateY(0deg) rotateX(360deg);
+  }
+}
